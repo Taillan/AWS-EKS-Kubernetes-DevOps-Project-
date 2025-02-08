@@ -13,7 +13,7 @@ resource  "aws_instance" "linux_jump_server" {
     key_name = "Linux_jump_server"
 
     # List of security group names to associate with
-    vpc_security_group_ids = [aws_security_group.EC2_LinuxJumpServer.id]
+    vpc_security_group_ids = [aws_security_group.EC2_LinuxJumpServer_sg.id]
     
     # Associate a public IP address with the instance
     associate_public_ip_address = true
