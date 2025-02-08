@@ -5,7 +5,6 @@ resource "aws_security_group" "EC2_LinuxJumpServer_sg" {
 
     tags = {
         Terraform = "true"
-        Name      = "Terrafom EKS Cluster Role"
         Owner     = var.owner
     }
 }
@@ -17,7 +16,6 @@ resource "aws_security_group" "EKS_Cluster_sg" {
 
     tags = {
         Terraform = "true"
-        Name      = "Terrafom EKS Cluster Role"
         Owner     = var.owner
     }
 }
@@ -29,7 +27,6 @@ resource "aws_security_group" "ECR_sg" {
 
     tags = {
         Terraform = "true"
-        Name      = "Terrafom EKS Cluster Role"
         Owner     = var.owner
     }
 }
@@ -41,7 +38,6 @@ resource "aws_security_group" "EC2_Jenkins_Master_sg" {
 
     tags = {
         Terraform = "true"
-        Name      = "Terrafom EKS Cluster Role"
         Owner     = var.owner
     }
 }
@@ -53,7 +49,6 @@ resource "aws_security_group" "EC2_Jenkins_Slave_sg" {
 
     tags = {
         Terraform = "true"
-        Name      = "Terrafom EKS Cluster Role"
         Owner     = var.owner
     }
 }

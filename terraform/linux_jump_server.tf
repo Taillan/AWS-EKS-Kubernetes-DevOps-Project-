@@ -7,7 +7,7 @@ resource  "aws_instance" "linux_jump_server" {
     instance_type = var.instance_type
 
     # VPC Subnet ID to associate with
-    subnet_id = aws_vpc.EKS_VPC.id
+    subnet_id = aws_subnet.web_public_subnet_3a.id
 
     # Key pair name to associate with
     key_name = "Linux_jump_server"
@@ -30,4 +30,8 @@ resource  "aws_instance" "linux_jump_server" {
         Terraform = "true"
         Owner = var.owner
     }
+
+    depends_on = [
+        aws_security_group.EC2_LinuxJumpServer_sg
+    ]
 }
